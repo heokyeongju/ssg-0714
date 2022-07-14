@@ -1,15 +1,19 @@
 package com.ll.exam;
 
 public class WiseSayingController {
-    void add(){
+    void write(Rq rq){
         System.out.println("등록");
     }
 
-    void remove() {
+    void remove(Rq rq) {
         System.out.println("삭제");
     }
 
-    void list() {
+    void list(Rq rq) {
         System.out.println("목록");
+    }
+
+    void modify(Rq rq) {
+
     }
 }
