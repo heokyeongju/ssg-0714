@@ -14,6 +14,6 @@ public class WiseSayingController {
     }
 
     void modify(Rq rq) {
-
+        System.out.println("수정");
     }
 }
