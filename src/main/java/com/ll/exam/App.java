@@ -13,7 +13,7 @@ public class App {
         while(true){
             System.out.print("명령 ) ");
             String cmd = sc.nextLine().trim();
-            Rq rq = new Rq();
+            Rq rq = new Rq(cmd);
 
             switch (cmd){
                 case "등록" :
