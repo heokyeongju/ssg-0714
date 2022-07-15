@@ -1,5 +1,7 @@
 package com.ll.exam;
 
+import java.util.Map;
+
 public class WiseSaying {
      int id;
      String content;
@@ -19,4 +21,6 @@ public class WiseSaying {
                 ", author='" + author + '\'' +
                 '}';
     }
+
+
 }

@@ -32,4 +32,10 @@ public class WiseSayingRepository {
     public List<WiseSaying> findAll(){
         return wiseSayings;
     }
+    public void remove(int paramId) {
+        WiseSaying foundWiseSaying = findById(paramId);
+        wiseSayings.remove(foundWiseSaying);
+
+        // 파일 삭제
+    }
 }

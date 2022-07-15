@@ -8,7 +8,6 @@ public class Rq {
     String path;
     Map<String, String> queryParams;
 
-    // 생성자 : 입력받은 경로에서 ? 를 기준으로 앞의 것을 path, 뒤의 것을 query로 처리
     public Rq(String url) {
         this.url = url;
         String[] urlBits = url.split("\\?", 2);
@@ -36,7 +35,6 @@ public class Rq {
         }
     }
 
-    // getIntParam :
     public int getIntParam(String paramName, int defaultValue) {
         if (queryParams.containsKey(paramName) == false) {
             return defaultValue;

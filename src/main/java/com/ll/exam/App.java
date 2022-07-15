@@ -15,7 +15,8 @@ public class App {
             String cmd = sc.nextLine().trim();
             Rq rq = new Rq(cmd);
 
-            switch (cmd){
+            switch (rq.getPath()) // cmd로 할 경우 쿼리로 들어오는 문장을 처리할 수 없다... 삭제와 수정....
+            {
                 case "등록" :
                     wc.write(rq);
                     break;
