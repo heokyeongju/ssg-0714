@@ -6,7 +6,7 @@ public class App {
     public void run(){
         Scanner sc = new Scanner(System.in);
 
-        WiseSayingController wc = new WiseSayingController();
+        WiseSayingController wc = new WiseSayingController(sc);
         System.out.println("========== 명언 앱 ==========");
 
         outer:
