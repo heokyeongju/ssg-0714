@@ -16,7 +16,6 @@ public class WiseSayingRepository {
         WiseSaying wiseSaying = new WiseSaying(id, content, author);
         wiseSayings.add(wiseSaying);
 
-        // 파일저장
 
         return wiseSaying;
     }
@@ -36,6 +35,5 @@ public class WiseSayingRepository {
         WiseSaying foundWiseSaying = findById(paramId);
         wiseSayings.remove(foundWiseSaying);
 
-        // 파일 삭제
     }
 }

@@ -21,27 +21,19 @@ public class WiseSayingController {
     }
 
     public void remove(Rq rq) {
-        // URL에 입력된 id 얻기
-        int paramId = rq.getIntParam("id", 0);
-
-        // URL에 입력된 id가 없다면 작업중지
+        int paramId = rq.getIntParam("id",0); // id를 키로 검색, 값이 없으면 0리턴
+     
         if (paramId == 0) {
             System.out.println("id를 입력해주세요.");
             return;
         }
+        WiseSaying ws = wiseSayingRepository.findById(paramId);
 
-        // URL에 입력된 id에 해당하는 명언객체 찾기
-        WiseSaying foundWiseSaying = wiseSayingRepository.findById(paramId);
-
-        // 찾지 못했다면 중지
-        if (foundWiseSaying == null) {
+        if (ws == null) {
             System.out.printf("%d번 명언은 존재하지 않습니다.\n", paramId);
             return;
         }
-
-        // 입력된 id에 해당하는 명언객체를 리스트에서 삭제
         wiseSayingRepository.remove(paramId);
-
         System.out.printf("%d번 명언이 삭제되었습니다.\n", paramId);
     }
 
