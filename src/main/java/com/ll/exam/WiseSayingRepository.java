@@ -29,4 +29,7 @@ public class WiseSayingRepository {
 
         return null;
     }
+    public List<WiseSaying> findAll(){
+        return wiseSayings;
+    }
 }

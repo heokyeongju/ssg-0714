@@ -1,5 +1,6 @@
 package com.ll.exam;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class WiseSayingController {
@@ -25,7 +26,14 @@ public class WiseSayingController {
     }
 
     void list(Rq rq) {
-        System.out.println("목록");
+        System.out.println("========== 명언 목록 ==========");
+        System.out.println("번호 / 작가 / 명언");
+        System.out.println("-------------------");
+        List<WiseSaying> wiseSayings = wiseSayingRepository.findAll();
+        for(int i = wiseSayings.size()-1 ; i>=0; i--){
+            WiseSaying ws = wiseSayings.get(i);
+            System.out.printf("%d / %s / %s\n", ws.id, ws.content, ws.author);
+        }
     }
 
     void modify(Rq rq) {
