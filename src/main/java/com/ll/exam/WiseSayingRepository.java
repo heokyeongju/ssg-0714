@@ -36,4 +36,12 @@ public class WiseSayingRepository {
         wiseSayings.remove(foundWiseSaying);
 
     }
+    public void modify( WiseSaying ws, String content, String author) {
+        WiseSaying fs = findById(ws.id);
+
+        fs.content = content;
+        fs.author = author;
+
+
+    }
 }
